@@ -1,0 +1,35 @@
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+
+
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/TestRest
+</property>
+
+		<property name="hibernate.connection.user">root</property>
+		<property name="hibernate.connection.password">dinga</property>
+
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.hbm2ddl.auto">update</property>
+		<property name="use_sql_comments">true</property>
+		<property name="hibernate.validator.apply_to_ddl">false</property>
+		<property name="hibernate.validator.autoregister_listeners">false</property>
+
+		<property name="minPoolSize"> 5</property>
+		<property name="maxPoolSize">100</property>
+		
+		<property name="initialPoolSize">5</property>
+		<property name="validateConnectionOnBorrow">true</property>
+		<property name="maxStatements">10</property>
+
+		<mapping class="com.castsoftware.JpaBoot.model.Employee" />
+	</session-factory>
+
+</hibernate-configuration>
